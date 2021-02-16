@@ -2,7 +2,6 @@ using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System.Threading;
-using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Interactions;
 using NunitPoc.src.main.dotnet.common;
 using NUnit.Framework;

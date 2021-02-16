@@ -5,9 +5,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
+using System.Threading;
 
 namespace NunitPoc.src.main.dotnet.common
 {
@@ -31,8 +31,9 @@ namespace NunitPoc.src.main.dotnet.common
 
         public void ExplicitWait(double timeInSeconds, By locator)
         {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeInSeconds));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeInSeconds));
+            //wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
+            Thread.Sleep(3000);
         }
         public void clickWithWait(By eleToBClicked)
         {
